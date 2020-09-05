@@ -62,7 +62,7 @@ func parseYaml(yml []byte) ([]urlpath, error) {
 	return paths, nil
 }
 
-func buildMap(paths []urlpath) map[string][string] {
+func buildMap(paths []urlpath) map[string]string {
 	pathsToUrls := make(map[string]string)
 	for _, path := range paths {
 		pathsToUrls[path.path] = path.url
